@@ -1,5 +1,8 @@
 import Button from "@/components/button";
+import Input from "@/components/input";
+import Label from "@/components/label";
 import PageHeader from "@/components/page-header";
+import Select from "@/components/select";
 import TransactionItem from "@/components/transaction-item";
 import TransactionSummaryItem from "@/components/transaction-summary-item";
 import Trend from "@/components/trend";
@@ -61,6 +64,32 @@ export default function Page() {
           <Button size='xs'>Hello</Button>
           <Button size='sm'>Hello</Button>
           <Button size='lg'>Hello</Button>
+        </div>
+      </div>
+
+      <div>
+        <h2 className="mb-4 text-lg font-mono">Forms</h2>
+        <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <Label className="block mb-1">Your name</Label>
+            <Input type='text' placeholder="Type something in here" />
+          </div>
+
+          <div>
+            <Label className="block mb-1">City</Label>
+            <Select>
+              <option>London</option>
+              <option>Berlin</option>
+              <option>Paris</option>
+              <option>Madrid</option>
+            </Select>
+          </div>
+
+          <div className="flex items-center">
+            <Input type='checkbox' id='terms' />
+            <Label className='ml-2' htmlFor=''>Accept terms</Label>
+          </div>
         </div>
       </div>
     </main>
