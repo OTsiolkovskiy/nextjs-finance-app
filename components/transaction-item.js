@@ -28,8 +28,8 @@ export default function TransactionItem({ type, category, description, amount })
   
   return(
     <div className="w-full flex items-center">
-      <IconComponent className={`${color} mr-2 w-4 h-4 hidden sm:block`} />
       <div className="flex items-center mr-4 grow">
+        <IconComponent className={`${color} mr-2 w-4 h-4 hidden sm:block`} />
         <span>{description}</span>
       </div>
 
